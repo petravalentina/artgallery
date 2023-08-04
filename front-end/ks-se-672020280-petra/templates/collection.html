@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amethyst Art Gallery</title>
+    <link href="../static/css/styles.css" rel="stylesheet" />
+    <link href="../static/css/main.css" rel="stylesheet" />
+</head>
+<body>
+    <header class="navbar sticky-top navbar-expand-lg navbar-dark main-nav">
+        <div class="container">
+          <a class="navbar-brand" href="{{ url_for('index') }}">
+            <img src="../static/img/logo.png" class="main-logo"/>
+            Amethyst Art Gallery</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto py-2">
+              <li class="nav-item">
+                <a class="nav-link active px-3" aria-current="page" href="{{ url_for('index') }}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active px-3" aria-current="page" href="{{ url_for('exhibition') }}">Exhibition</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active px-3" aria-current="page" href="{{ url_for('collection') }}">Collection</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+    </header>
+    <section class="main-biru">
+        <div class="container py-5">
+            <div class="text-center">
+                <h1>Collection</h1>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="">
+      <div class="container py-3">
+        <div class="row">
+          <div class="col-lg-3 px-3 py-2">
+            <div class="card" style="width: 18rem; ">
+              <img src="../static/img/painting5.jpg"alt="" style="max-height: 200px;">
+              <div class="card-body">
+                <h5 class="card-title">The Voyage of Life Youth</h5>
+                <p>Thomas Cole</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 px-3 py-2">
+            <div class="card" style="width: 18rem; ">
+              <img src="../static/img/painting12.jpg"alt="" style="max-height: 200px;">
+              <div class="card-body">
+                <h5 class="card-title">Church of The Holy Cross</h5>
+                <p>Bernardo Belloto</p>
+              </div>
+            </div>
+          </div>  
+          <div class="col-lg-3 px-3 py-2">
+            <div class="card" style="width: 18rem; ">
+              <img src="../static/img/painting7.jpg"alt="" style="max-height: 200px;">
+              <div class="card-body">
+                <h5 class="card-title">Dream Land</h5>
+                <p>Thomas Cole</p>
+              </div>
+            </div>
+          </div>    
+          <div class="col-lg-3 px-3 py-2">
+            <div class="card" style="width: 18rem; ">
+              <img src="../static/img/painting4.jpg"alt="" style="max-height: 200px;">
+              <div class="card-body">
+                <h5 class="card-title">Sita and Sarita</h5>
+                <p>Cecilia Beaux</p>
+              </div>
+            </div>
+          </div>              
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="blog" class="">
+        <div class="container py-5">
+          <div class="row">
+            {% for collection in collection %}
+            <div class="col-lg-3 px-3 py-2">
+              <div class="card" style="width: 18rem; ">
+                <img src="{{ collection.img }}"alt="" style="max-height: 200px;">
+                <div class="card-body">
+                  <h5 class="card-title">{{ collection.title }}</h5>
+                  <p>{{ collection.artist}}</p>
+                </div>
+              </div>
+            </div>
+            {% endfor %}        
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    <footer>
+        <div class="main-footer-menu main-biru py-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-3 mb-3">
+                <h5>About</h5>
+                <ul>
+                  <li><a href="">About Amethyst Art Gallery</a></li>
+                  <li><a href="">Stories</a></li>
+                  <li><a href="">FAQs</a></li>
+                </ul>
+              </div>
+              <div class="col-lg-3 mb-3">
+                <h5>Company</h5>
+                <ul>
+                  <li>Location: 7th St and Constitution Ave NW <br>
+                    Enter or exit at 7th Street, Constitution Avenue, or Madison Drive.</li>
+                  <li>Hours: 10:00 a.m. to 6:00 p.m. daily</li>
+                  <li>Off Hours Visits available by Appointment</li>
+                </ul>
+              </div>
+              <div class="col-lg-3 mb-3">
+                <h5>Contact</h5>
+                <ul>
+                  <li>Email : amethystartgallery@gmail.com</li>
+                  <li>Instagram : @amethystartgallery</li>
+                  <li>Pinterest : amethystartgallery</li>
+                </ul>
+              </div>
+              <div class="col-lg-3 mb-3">
+                <h5>Customer</h5>
+                <ul>
+                  <li><a href="">Customer Support</a></li>
+                  <li><a href="">Join a local user group</a></li>
+                  <li><a href="">Art Education & Submition Program</a></li>
+                  <li><a href="">Membership</a></li>
+                </ul>
+              </div>
+              <div class="text-center">
+                <p>designed & developed with &hearts;</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center py-3 main-biru">Copyright &copy; 2023. All Rights Reserved </div>
+      </footer>
+      <script src="../static/js/scripts.js"></script>
+      <script src="../static/js/jquery.js"></script>
+      <script src="../static/js/main.js"></script>
+  </body>
+  </html>

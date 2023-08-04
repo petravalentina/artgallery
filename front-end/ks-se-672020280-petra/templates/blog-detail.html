@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amethyst Art Gallery</title>
+    <link href="../static/css/styles.css" rel="stylesheet" />
+    <link href="../static/css/main.css" rel="stylesheet" />
+</head>
+<body>
+  <header class="navbar sticky-top navbar-expand-lg navbar-dark main-nav">
+    <div class="container">
+      <a class="navbar-brand" href="{{ url_for('index') }}">
+        <img src="../static/img/logo.png" class="main-logo"/>
+        Amethyst Art Gallery</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto py-2">
+          <li class="nav-item">
+            <a class="nav-link active px-3" aria-current="page" href="{{ url_for('index') }}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active px-3" aria-current="page" href="{{ url_for('exhibition') }}">Exhibition</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active px-3" aria-current="page" href="{{ url_for('collection') }}">Collection</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+</header>
+    <section id="blog-detail">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-8 mb-3 mx-auto">
+                    <!--detail tulisan-->
+                    <div class="rounded shadow-lg w-100">
+                        <div >
+                            <div class="px-5 py-4">
+                            <h1>Master of Storyteller Renaissance Venice</h1>
+                            
+                        </div>
+                            <div >
+                                <img src="..//static/img/event1.jpg" class="w-100">
+                            </div>
+                            <div class="px-4 py-4">
+                                <p>During the Renaissance in Venice, there were many skilled storytellers who entertained the wealthy and noble families with their tales of adventure, romance, and intrigue. The most renowned among them was known simply as "Il Maestro," or the Master.
+
+                                  Il Maestro was a man of great charm and wit, with a gift for weaving complex and intricate tales that captivated his audience. His stories were full of colorful characters, rich detail, and unexpected twists and turns. He had a deep knowledge of Venetian history and culture, which he used to create vivid and immersive worlds for his listeners.</p>
+                                <p>Some of Il Maestro's most famous tales were set in the world of the Venetian Republic itself, full of political maneuvering, intrigue, and scandal. He would tell of powerful doges and scheming patricians, of secret societies and forbidden romances. His stories were both a reflection of and a commentary on the complex society of Renaissance Venice.
+
+                                  Other tales of Il Maestro took his listeners far beyond the city's walls, to distant lands and exotic cultures. He would tell of brave explorers discovering new worlds, of epic battles and quests for treasure, and of forbidden love affairs between people from different cultures.</p>
+                                <p>Il Maestro's storytelling was not just entertainment; it was a way for the people of Venice to explore their own desires, fears, and ambitions through the lens of fiction. His tales inspired countless other writers and artists throughout the Renaissance and beyond, and his legacy continues to be felt in the world of storytelling today.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--related post-->
+                    <div class="mt-5 main-tulisan-lain">
+                        <h3 class="mb-3">Related Posts</h3>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                <img src="../static/img/event2.jpg" class="w-100 rounded"/>
+                                <h4><a href="">Called to Create</a></h4>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                <img src="../static/img/event3.jpg" class="w-100 rounded"/>
+                                <h4><a href="">The Interior Life</a></h4>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                <img src="../static/img/painting2.jpg" class="w-100 rounded"/>
+                                <h4><a href="">Canova : Sketching in Clay</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+      <div class="main-footer-menu main-biru py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 mb-3">
+              <h5>About</h5>
+              <ul>
+                <li><a href="">About Amethyst Art Gallery</a></li>
+                <li><a href="">Stories</a></li>
+                <li><a href="">FAQs</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 mb-3">
+              <h5>Company</h5>
+              <ul>
+                <li>Location: 7th St and Constitution Ave NW <br>
+                  Enter or exit at 7th Street, Constitution Avenue, or Madison Drive.</li>
+                <li>Hours: 10:00 a.m. to 6:00 p.m. daily</li>
+                <li>Off Hours Visits available by Appointment</li>
+              </ul>
+            </div>
+            <div class="col-lg-3 mb-3">
+              <h5>Contact</h5>
+              <ul>
+                <li>Email : amethystartgallery@gmail.com</li>
+                <li>Instagram : @amethystartgallery</li>
+                <li>Pinterest : amethystartgallery</li>
+              </ul>
+            </div>
+            <div class="col-lg-3 mb-3">
+              <h5>Customer</h5>
+              <ul>
+                <li><a href="">Customer Support</a></li>
+                <li><a href="">Join a local user group</a></li>
+                <li><a href="">Art Education & Submition Program</a></li>
+                <li><a href="">Membership</a></li>
+              </ul>
+            </div>
+            <div class="text-center">
+              <p>designed & developed with &hearts;</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center py-3 main-biru">Copyright &copy; 2023. All Rights Reserved </div>
+    </footer>
+      <script src="../static/js/scripts.js"></script>
+      <script src="../static/js/jquery.js"></script>
+      <script src="../static/js/main.js"></script>
+  </body>
+  </html>

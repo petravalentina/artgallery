@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amethyst Art Gallery</title>
+    <link href="../static/css/styles.css" rel="stylesheet" />
+    <link href="../static/css/main.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  </head>
+<body>
+    <header class="navbar sticky-top navbar-expand-lg navbar-dark main-nav">
+        <div class="container">
+          <a class="navbar-brand" href="{{ url_for('index') }}">
+            <img src="../static/img/logo.png" class="main-logo"/>
+            Amethyst Art Gallery</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto py-2">
+              <li class="nav-item">
+                <a class="nav-link active px-3" aria-current="page" href="{{ url_for('index') }}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active px-3" aria-current="page" href="{{ url_for('exhibition') }}">Exhibition</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active px-3" aria-current="page" href="{{ url_for('collection') }}">Collection</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+    </header>
+    <section class="">
+      
+          <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active c-item">
+                <img src="../static/img/bg.png" class="d-block w-100 h-100" alt="...">
+                <div class="carousel-caption top-0 mt-4">
+                  <p class="mt-5 fs-3 text-uppercase c-item">ART. PASSION. MEMORIES. All of your memories and the ones we'll make together start here</p>
+                  
+                  <h1 class="display-1 fw-bolder text-capitalize">The Art of Looking</h1>
+              </div>
+            </div>
+          </div>
+    
+    </section>
+    <section id="kepercayaan" class="main-grey">
+      <div class="container py-5 text-center">
+        <h2>Our Community</h2>
+        <p> Our community provides a platform for artists to showcase their work and gain recognition, whether through exhibitions, galleries, festivals, or online platforms.</p>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="row">
+            <div class="col-md-4">
+              <h3>100%</h3>
+              <p>Satisfaction</p>
+            </div>
+            <div class="col-md-4">
+              <h3>100+</h3>
+              <p>Artists</p>
+            </div>
+            <div class="col-md-4">
+              <h3>2000+</h3>
+              <p>Collections</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <section id="upgrade" class="">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-lg-3 px-3 ">
+            <div class="card" style="width: 18rem; ">
+              <img src="../static/img/painting1.jpg" class="card-img-top " alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Tomorrow I May Be Far</h5>
+                <p>by Romare Bearden</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 px-3 ">
+            <div class="card" style="width: 18rem; ">
+              <img src="../static/img/painting6.jpg" class="card-img-top " alt="...">
+              <div class="card-body">
+                <h5 class="card-title">The Farm</h5>
+                <p>by Joan Miro</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 px-3 ">
+            <div class="card" style="width: 18rem;">
+              <img src="../static/img/painting5.jpg" class="card-img-top  " alt="...">
+              <div class="card-body">
+                <h5 class="card-title">The Voyage of Life Youth</h5>
+                <p>by Thomas Cole</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 px-3 ">
+            <div class="card" style="width: 18rem;">
+              <img src="../static/img/painting8.jpg" class="card-img-top  " alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Fortress of Konigstein</h5>
+                <p>by Bernardo Belloto</p>
+              </div>
+            </div>
+          </div>
+          <div class="text-center py-5">
+            <a href="{{ url_for('collection') }}" class="btn btn-outline-success">View more Collections</a>
+          </div>
+          
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="sertifikasi">
+      <div class="container py-5 main-grey">
+        <div class="row">
+          <div class="col-lg-6 px-4 align-self-center">
+            <img src="../static/img/logo.png" class="w-75">
+          </div>
+          <div class="col-lg-6 px-2">
+            <p class="main-atas-judul"></p>
+            <h2>Our Mission</h2>
+            <p>The mission of our company is to create, promote, and educate artwork, while also fostering appreciation for the arts and supporting artists and their careers.
+              This mission may include developing relationships with artists and galleries, curating exhibitions, managing collections, selling artwork to collectors and institutions, providing art advisory services, and promoting artists and their work through marketing and public relations efforts.</p>
+            <p>In addition, our company may also have a philanthropic component, supporting art education, cultural institutions, and other initiatives that contribute to the advancement of the arts and the cultural landscape.
+              Overall, it is to facilitate the creation and dissemination of art, while also contributing to the growth and sustainability of the broader art ecosystem.</p>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="main-kolaborasi">
+      <div class="container py-5 ">
+          <h2 class="text-center main-judul">Our Collaboration with Institutions</h2>
+          <p class="text-center">This Collaboration provide greater exposure to a wider audience. 
+            Institutions have established audiences who are interested in art and culture, and collaborating with these amazing institutions
+             can help art community to connect with their audiences and build relationships with community members.</p>
+          <div class="text-center py-3">
+              <a href=""><img src="../static/img/ins1.png"/></a>
+              <a href=""><img src="../static/img/ins2.jpg"/></a>
+              <a href=""><img src="../static/img/ins3.jpg"/></a>
+              <a href=""><img src="../static/img/ins4.jpg"/></a>
+          </div>
+      </div>
+  </section>
+    <section id="blog" class="main-grey">
+      <div class="container text-center py-5">
+        <h2 class="main-judul">What's On</h2>
+        <p>Amethyst art gallery this year highlight exhibitions</p>
+      <div class="row text-start">
+        <div class="col-md-4 mb-3">
+          <div class="card border-0 shadow-sm w-100">
+            <img src="../static/img/event3.jpg" class="card-img-top" alt="penjelasan dari thumbnail">
+            <div class="card-body">
+              <h5 class="card-title"> <a href="{{ url_for('blog_detail') }}">Master Storyteller of Renaissance Venice</a></h5>
+              <p class="card-text">A leading figure in the art of Renaissance Venice, Vittore Carpaccio is best known for his large, spectacular narrative paintings that brought sacred history to life.</p>
+            </div>
+            <div class="card-body main-blog-info">
+              <a href="" class="main-blog-author">West Building, Main Floor</a><br />
+              <span>February 22, 2023 - June 26, 2023</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card border-0 shadow-sm w-100">
+            <img src="../static/img/event1.jpg" class="card-img-top" alt="penjelasan dari thumbnail">
+            <div class="card-body">
+              <h5 class="card-title"> <a href="#">Behind the Studio Wall</a></h5>
+              <p class="card-text">Engaging with art can be a transformative experience, helping us to develop our empathy, self-awareness, and emotional intelligence. Know what's inside our studio.</p>
+            </div>
+            <div class="card-body main-blog-info">
+              <a href="" class="main-blog-author">North Building</a><br />
+              <span>April 21, 2023</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card border-0 shadow-sm w-100">
+            <img src="../static/img/painting3.jpg" class="card-img-top" alt="penjelasan dari thumbnail">
+            <div class="card-body">
+              <h5 class="card-title"> <a href="#">Drawing In Britain : New Addition to the Collection</a></h5>
+              <p class="card-text">This exhibition of approximately 80 recently acquired drawings and watercolors provides an overview of two centuries of British art.</p>
+            </div>
+            <div class="card-body main-blog-info">
+              <a href="" class="main-blog-author">West Building</a><br />
+              <span>March 17, 2023</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <section id="subscribe">
+      <div class="container py-5 text-center">
+        <h2 class="main-judul">Stay Connected</h2>
+        <p>Learn more about our exhibitions, news, programs, and special offers.</p>
+        <div class="col-md-4 mx-auto">
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Enter your email">
+          </div>
+          <div>
+            <button class="btn" type="submit">SUBSCRIBE</button>
+          </div>
+        </div>       
+      </div>
+    </section>
+    <footer>
+      <div class="main-footer-menu main-biru py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 mb-3">
+              <h5>About</h5>
+              <ul>
+                <li><a href="">About Amethyst Art Gallery</a></li>
+                <li><a href="">Stories</a></li>
+                <li><a href="">FAQs</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 mb-3">
+              <h5>Company</h5>
+              <ul>
+                <li>Location: 7th St and Constitution Ave NW <br>
+                  Enter or exit at 7th Street, Constitution Avenue, or Madison Drive.</li>
+                <li>Hours: 10:00 a.m. to 6:00 p.m. daily</li>
+                <li>Off Hours Visits available by Appointment</li>
+              </ul>
+            </div>
+            <div class="col-lg-3 mb-3">
+              <h5>Contact</h5>
+              <ul>
+                <li>Email : amethystartgallery@gmail.com</li>
+                <li>Instagram : @amethystartgallery</li>
+                <li>Pinterest : amethystartgallery</li>
+              </ul>
+            </div>
+            <div class="col-lg-3 mb-3">
+              <h5>Customer</h5>
+              <ul>
+                <li><a href="">Customer Support</a></li>
+                <li><a href="">Join a local user group</a></li>
+                <li><a href="">Art Education & Submition Program</a></li>
+                <li><a href="">Membership</a></li>
+              </ul>
+            </div>
+            <div class="text-center">
+              <p>designed & developed with &hearts;</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center py-3 main-biru">Copyright &copy; 2023. All Rights Reserved </div>
+    </footer>
+    <script src="../static/js/scripts.js"></script>
+    <script src="../static/js/jquery.js"></script>
+    <script src="../static/js/main.js"></script>
+</body>
+</html>

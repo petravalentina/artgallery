@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- ========================= CSS Bootstrap 5.2 ========================= -->
+    <link rel="stylesheet" href="../static/assets/bootstrap/css/bootstrap.min.css" />
+
+    <!-- ========================= SWEETALERT2 ========================= -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.5/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.5/dist/sweetalert2.min.js"></script>
+</head>
+
+<body style="background-color: hsl(0, 0%, 95%)">
+    <!-- Section: Design Block -->
+    <section class="">
+        <!-- Jumbotron -->
+        <div class="px-4 py-5 px-md-5 text-center text-lg-start">
+            <div class="container">
+                <div class="row gx-lg-5 align-items-center">
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <h1 class="mt-3 mb-2 display-3 fw-bold ls-tight">
+                            Amethyst Art Gallery <br />
+                            <span class="text-primary">Admin</span>
+                        </h1>
+                        <p style="color: hsl(217, 10%, 50.8%)">Dapatkan pengalaman art gallery yang lebih baik
+                            dengan sistem informasi kami</p>
+                    </div>
+
+                    <div class="col-lg-6 mb-5 mb-lg-0 mt-5">
+                        <div class="card">
+                            {% if error %}
+                            <script>
+                                Swal.fire({
+                                    icon: 'error',
+                                    title: 'Login Gagal',
+                                    text: '{{ error }}'
+                                })
+                            </script>
+                            {% endif %}
+                            <div class="card-body py-5 px-md-5">
+                                <h1 class="text-center text-primary mb-5">Login</h1>
+                                <form method="POST" action="/login">
+                                    <!-- Email input -->
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label" for="username">Username</label>
+                                        <input type="text" id="username" name="username" class="form-control"
+                                            required />
+                                    </div>
+
+                                    <!-- Password input -->
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label" for="password">Password</label>
+                                        <input type="password" id="password" name="password" class="form-control"
+                                            required />
+                                    </div>
+
+                                    <!-- Submit button -->
+                                    <button type="submit" class="btn btn-primary btn-block mb-4 col-3">Login</button>
+                                </form>
+                            </div>
+                            <span class="text-center text-muted">Kapita Selekta Alfamart &copy;Petra Valentina -
+                               672020280 </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Jumbotron -->
+    </section>
+    <!-- Section: Design Block -->
+    </div>
+
+    <!-- ========================= JS Bootstrap 5.2 ========================= -->
+    <script src="../static/assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+falcon
+gunicorn
+psycopg2
+PyJWT
+waitress
+falcon_cors
+werkzeug
